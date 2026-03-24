@@ -135,9 +135,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 FRONTEND_URL = os.environ.get('FRONTEND_URL', 'localhost')
 FRONTEND_PORT = os.environ.get('FRONTEND_PORT', '80')
 
-CORS_ALLOWED_ORIGINS = (
+CORS_ALLOWED_ORIGINS = [
     f'http://{FRONTEND_URL}:{FRONTEND_PORT}',
-)
+]
 
 # Tell Django about the custom `User` model we created. The string
 # `authentication.User` tells Django we are referring to the `User` model in
